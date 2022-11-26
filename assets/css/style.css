@@ -7,12 +7,13 @@ body {
 }
 
 .navbar {
-    
+    margin-bottom: 3rem;
 }
 
 .random-generator {
     width: 40rem;
     margin-left: 10rem;
+    background-color: black;
 }
 
 .notification.is-danger {
@@ -22,6 +23,7 @@ body {
 .about-section {
     width: 40rem;
     margin-left: 10rem;
+    font-size: 20px;
 }
 
 .consoles {
@@ -33,3 +35,22 @@ body {
     text-align: center;
 }
 
+.console {
+    margin: 20px;
+    text-align: center;
+}
+
+#xbox {
+    background-color: darkgreen;
+    border: 3px solid black;
+}
+
+#playstation {
+    background-color: darkblue;
+    border: 3px solid black;
+}
+
+#nintendo {
+    background-color: red;
+    border: 3px solid black;
+}
