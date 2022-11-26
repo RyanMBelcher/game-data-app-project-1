@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: darkslategrey;
+}
+
+.navbar {
+    margin-bottom: 3rem;
+}
+
+.random-generator {
+    width: 40rem;
+    margin-left: 10rem;
+    background-color: black;
+}
+
+.notification.is-danger {
+    background-color: darkslategrey;
+}
+
+.about-section {
+    width: 40rem;
+    margin-left: 10rem;
+    font-size: 20px;
+}
+
+.consoles {
+    width: 40rem;
+    margin-left: 10rem;
+}
+
+.top-games {
+    text-align: center;
+}
+
+.console {
+    margin: 20px;
+    text-align: center;
+}
+
+#xbox {
+    background-color: darkgreen;
+    border: 3px solid black;
+}
+
+#playstation {
+    background-color: darkblue;
+    border: 3px solid black;
+}
+
+#nintendo {
+    background-color: red;
+    border: 3px solid black;
+}
