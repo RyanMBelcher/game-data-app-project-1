@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    
+}
+
+.random-generator {
+    width: 50rem;
+}
+ 
+.about-section {
+    width: 50rem;
+}
+
+.top-10 {
+    width: 30rem;
+    margin-left: 30rem;
+}

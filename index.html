@@ -6,11 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Video Game Generator App</title>
 </head>
 
 <body>
-    <div class="tile is-ancestor">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Generate
+            </a>
+      
+            <a class="navbar-item">
+              Consoles
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Games
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  Latest
+                </a>
+                <a class="navbar-item">
+                  Popular
+                </a>
+                <a class="navbar-item">
+                  Vintage
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Generate a random game
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+          </div>
+        </div>
+        <textarea class="textarea" placeholder="Search:" rows="1"></textarea>
+      </nav>
+   
+    <div class="about-section tile is-ancestor">
         <div class="tile is-vertical is-10">
             <div class="tile is-parent">
                 <article class="tile is-child notification is-danger">
@@ -36,7 +89,7 @@
                     </article>
                 </div>
             </div>
-            <div class="tile">
+            <div class="random-generator tile">
                 <div class="tile is-vertical is-parent">
                     <article class="tile is-child notification is-info">
                         <p class="title">Random Video Game Generator:</p>
@@ -134,7 +187,7 @@
                 </div>
             </div>
         </div>
-        <div class="tile is-parent">
+        <div class="top-10 tile is-parent">
             <article class="tile is-child notification is-success">
                 <div class="content">
                     <p class="title">Current Top 10 Video Games</p>
