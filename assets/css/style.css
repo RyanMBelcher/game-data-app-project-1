@@ -4,19 +4,32 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: slategrey;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navbar {
     margin-bottom: 3rem;
 }
 
-.random-generator {
-    background-color: black;
-}
-
 .main {
     margin: 3rem;
+}
+
+.random-generator {
+    background-color: black;
+    border: solid 3px antiquewhite;
+}
+
+.game-of-the-day {
+    border: solid 3px black;
+}
+
+.about-section.box {
+    margin-bottom: 3rem;
+    padding: 3rem;
+    background: none;
+    color: white;
+    font-size: large;
 }
 
 .top-10-games {
@@ -27,13 +40,14 @@ body {
     margin: 5px;
 }
 
-.top-10-users {
+.top-10-rated {
     background-color: black;
     text-align: center;
     color: antiquewhite;
     border: solid 3px antiquewhite;
     margin: 5px;
-}
+} 
+
 
  
 

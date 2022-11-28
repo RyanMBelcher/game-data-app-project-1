@@ -11,11 +11,10 @@
 </head>
 
 <body>
-   
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
@@ -24,39 +23,64 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item">
-                Generate
-            </a>
-            <a class="navbar-item">
-                 Consoles
-            </a>
-        <div class="navbar-item is-hoverable">
-            <a class="navbar-link">
-                Games
-            </a>
-        </div>
-        </div>
+        <div id="navbarBasic" class="navbar-menu">
+            <div class="navbar-start">
+                <button class="navbar-item">
+                    Generate
+                </button>
+                <div class="navbar-item is-hoverable">
+                <button class="navbar-link">
+                    Consoles
+                </button>
+                </div>
+                <div class="navbar-item is-hoverable">
+                <button class="navbar-link">
+                    Games
+                </button>
+                </div>
+            </div>
     </nav>
 
-<main class="main columns">
-    <section class="game-generator column is-half">  
-        <article class="box">
-            <p>Looking for a new video game to play? This webstie gives you a random video game recommendation.
-                Also, check out the latest and most popular games to date. Sorted by genre, platfrom, user scores, and more.
-            </p>
-        </article>
-        <object class="random-generator box">
-            <h1>Generate a random game</h1>
-        </object>
-        <object class="game-of-the-day box">
-            <h1>Game of the Day</h1>
-        </object>
-    </section>
-        
-    <aside class="top-10-games column is-one-fifth is-offset-1">
-        <h1 class="title">Current Top 10 Video Games</h1>
+    <main class="main columns">
+        <section class="game-generator column is-half">
+            <article class="about-section box">
+                <p>Looking for a new video game to play? This webstie gives you a random video game recommendation.
+                    Also, check out the latest and most popular games to date. Sorted by genre, platfrom, user scores,
+                    and more.
+                </p>
+            </article>
+            <object class="random-generator box">
+                <h1>Generate a random game</h1>
+                <div class="genre">
+                    <select>
+                        <option>Action</option>
+                        <option>Adventure</option>
+                        <option>RPG</option>
+                        <option>Platformer</option>
+                        <option>Simulation</option>
+                        <option>Strategy</option>
+                        <option>Sports</option>
+                    </select>
+                </div>
+                <div class="platform">
+                    <select>
+                        <option>Playstation</option>
+                        <option>Xbox</option>
+                        <option>Nintendo</option>
+                        <option>PC</option>
+                    </select>
+                </div>
+                <button class="button is-small is-rounded is-hoverable">GENERATE</button>
+            </object>
+            
+            <object class="game-of-the-day box">
+                <h1>Game of the Day</h1>
+                <p>"Dev's recommendation"</p>
+            </object>
+        </section>
+
+        <aside class="top-10-games column is-one-fifth is-offset-1">
+            <h1 class="title">Top 10 Played Video Games</h1>
             <ul>
                 <li>Game 1</li>
                 <li>Game 2</li>
@@ -69,10 +93,10 @@
                 <li>Game 9</li>
                 <li>Game 10</li>
             </ul>
-    </aside>
-    
-    <aside class="top-10-users column is-one-fifth">
-        <h1 class="title">Top 10 Video Games Users</h1>
+        </aside>
+
+        <aside class="top-10-rated column is-one-fifth">
+            <h1 class="title">Top 10 Rated Video Games</h1>
             <ul>
                 <li>User 1</li>
                 <li>User 2</li>
@@ -85,10 +109,9 @@
                 <li>User 9</li>
                 <li>User 10</li>
             </ul>
-    </aside>
+        </aside>
+    </main>
 
-</main>  
-  
 </body>
 
 </html>
