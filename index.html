@@ -5,11 +5,201 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Video Game Generator App</title>
 </head>
 
 <body>
-
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" id="generate">
+              Generate
+            </a>
+      
+            <a class="navbar-item">
+              Consoles
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Games
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  Latest
+                </a>
+                <a class="navbar-item">
+                  Popular
+                </a>
+                <a class="navbar-item">
+                  Vintage
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Generate a random game
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+          </div>
+        </div>
+        <textarea class="textarea" placeholder="Search:" rows="1"></textarea>
+      </nav>
+   
+    <div class="about tile is-ancestor">
+        <div class=" tile is-vertical is-7">
+            <div class="about-section tile is-parent">
+                <article class="tile is-child notification is-danger">
+                    <p>Looking for a new video game to play? This website gives you a random video game recommendation. Also,
+                        check out the latest and most popular games to date. Sorted by genre, platfrom, game developers,
+                        and more.</p>
+                </article>
+            </div>
+            <div class="consoles columns">
+                <div class="tile is-parent">
+                    <article class="console tile notification is-primary is-3" id="xbox">
+                        <p class="title">XBOX</p>
+                    </article>
+                    <article class="console tile notification is-primary is-3" id="playstation">
+                        <p class="title"> PLAYSTATION</p>
+                    </article>
+                    <article class="console tile notification is-primary is-3" id="nintendo">
+                        <p class="title">NINTENDO</p>
+                    </article>
+                </div>
+            </div>
+            <div class="random-generator tile">
+                <div class="tile is-vertical is-parent">
+                    <article class="tile is-child notification is-info">
+                        <p class="title">Random Video Game Generator:</p>
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Genre</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-item">
+                                        Dropdown item
+                                    </a>
+                                    <a class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item is-active">
+                                        Active dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        With a divider
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Platform</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-item">
+                                        Dropdown item
+                                    </a>
+                                    <a class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item is-active">
+                                        Active dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        With a divider
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Developer</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-item">
+                                        Dropdown item
+                                    </a>
+                                    <a class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item is-active">
+                                        Active dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        With a divider
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="top-10 tile is-3">
+            <article class="top-games tile is-child notification is-success">
+                <div class=" top-games content">
+                    <p class="title">Current Top 10 Video Games</p>
+                    <ul id="popular">
+                        <li id="gameOne">Game 1</li>
+                        <li id="gameTwo">Game 2</li>
+                        <li id="gameThree">Game 3</li>
+                        <li id="gameFour">Game 4</li>
+                        <li id="gameFive">Game 5</li>
+                        <li id="gameSix">Game 6</li>
+                        <li id="gameSeven">Game 7</li>
+                        <li id="gameEight">Game 8</li>
+                        <li id="gameNine">Game 9</li>
+                        <li id="gameTen">Game 10</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
