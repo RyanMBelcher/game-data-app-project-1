@@ -4,20 +4,23 @@ var generateRandom = document.getElementById('#generate')
 const firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
 const secondkey = 'f137cf1f3c1fd662bd0326d342bf09b81662bb59';
 
-let getTen = () => {
+function getTen() {
     fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&dates=2022-01-01,2022-12-31&ordering=-added&page_size=10')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        var nameOne = data.name
+        
+
+    })
+}
+
+let getTenMore = () => {
+    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&dates=2022-01-01,2023-01-01&ordering=-rating&page_size=10')
     .then(response => response.json())
     .then(data => console.log(data))
 }
-
-// .then(data => console.log(data))
-// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df'(search?)
-let searchGame = () => {
-    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&search=${slug}')
-    .then(resp => resp.json())
-    .then(({results}) => {
-        results === undefined ? alert('no games found') :
-})};
 
 
 // GET RANDOM GAME
@@ -36,10 +39,10 @@ let searchGame = () => {
 //       });
 //       return response.data.count;}
 
-// `https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page=${number}&page_size=1` (fetchRawgSlug)
+// `https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page=${number}&page_size=' (fetchRawgSlug)
 // function fetchRawgSlug(number) {
 //       const response = await axios({
-//         url: `https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page=${number}&page_size=1`,
+//         url: `https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page=${number}&page_size=1',
 //         method: 'GET'
 //       });
 //       return response.data.results[0].slug;
@@ -61,5 +64,24 @@ let searchGame = () => {
 // 'https://www.giantbomb.com/api/user_reviews/?api_key=f137cf1f3c1fd662bd0326d342bf09b81662bb59'
 // Pull parameter 'score' to reveal general user score
 // MATCH API PARAMETERS 'slug'='game' OR 'name'='game'. Parameter 'game' belongs to giantbomb, parameter 'slug'/'name' belongs to RAWG.
+
+// FILTER GENRE
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&genres=action'
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&genres=adventure'
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&genres=role-playing-games-rpg'
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&genres=platformer'
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&genres=simulation'
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&genres=strategy'
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&genres=sports'
+
+// FILTER PLATFORM
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&parent_platforms=1'
+// PC
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&parent_platforms=2'
+// Playstation
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&parent_platforms=3'
+// Xbox
+// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&parent_platforms=7'
+// Nintendo
 
 getTen();
