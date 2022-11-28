@@ -3,7 +3,7 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background-color: darkslategrey;
+    background-color: slategrey;
 }
 
 .navbar {
@@ -53,4 +53,8 @@ body {
 #nintendo {
     background-color: red;
     border: 3px solid black;
+}
+
+.title {
+    
 }
