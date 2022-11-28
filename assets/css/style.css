@@ -3,54 +3,51 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background-color: darkslategrey;
+    background-color: slategrey;
+    overflow-x: hidden;
 }
 
 .navbar {
     margin-bottom: 3rem;
 }
 
+.main {
+    margin: 3rem;
+}
+
 .random-generator {
-    width: 40rem;
-    margin-left: 10rem;
     background-color: black;
+    border: solid 3px antiquewhite;
 }
 
-.notification.is-danger {
-    background-color: darkslategrey;
+.game-of-the-day {
+    border: solid 3px black;
 }
 
-.about-section {
-    width: 40rem;
-    margin-left: 10rem;
-    font-size: 20px;
+.about-section.box {
+    margin-bottom: 3rem;
+    padding: 3rem;
+    background: none;
+    color: white;
+    font-size: large;
 }
 
-.consoles {
-    width: 40rem;
-    margin-left: 10rem;
-}
-
-.top-games {
+.top-10-games {
+    background-color: antiquewhite;
     text-align: center;
+    color: black;
+    border: solid 3px black;
+    margin: 5px;
 }
 
-.console {
-    margin: 20px;
+.top-10-rated {
+    background-color: black;
     text-align: center;
-}
+    color: antiquewhite;
+    border: solid 3px antiquewhite;
+    margin: 5px;
+} 
 
-#xbox {
-    background-color: darkgreen;
-    border: 3px solid black;
-}
 
-#playstation {
-    background-color: darkblue;
-    border: 3px solid black;
-}
+ 
 
-#nintendo {
-    background-color: red;
-    border: 3px solid black;
-}
