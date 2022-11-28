@@ -21,16 +21,17 @@ body {
     border: solid 3px gold;
     font-size: x-large;
     color: white;
-    
-}
-
-.random-generator button {
-    float: inline-end;
 }
 
 .game-of-the-day {
-    border: solid 3px black;
+    border: solid 3px white;
     font-size: xx-large;
+    margin-top: 2rem;
+    background-color: gold;
+}
+
+.game-of-the-day p {
+    font-size: medium;
 }
 
 .about-section {
@@ -43,11 +44,12 @@ body {
 }
 
 .top-10-games {
-    background-color: white;
+    background-color: gold;
     text-align: center;
     color: black;
-    border: solid 3px black;
+    border: solid 3px white;
     margin: 5px;
+    margin-top: 3rem;
     height: fit-content;
 }
 
@@ -57,15 +59,18 @@ body {
     color: white;
     border: solid 3px gold;
     margin: 5px;
+    margin-top: 3rem;
     height: fit-content;
 }
 
 .top-10-rated .title {
     color: white;
     text-decoration: underline;
+    text-align: center;
 }
 
 .top-10-games .title {
     color: black;
     text-decoration: underline;
+    text-align: center;
 }
