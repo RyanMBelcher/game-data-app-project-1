@@ -39,7 +39,7 @@ body {
     background: none;
     color: white;
     font-size: large;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .top-10-games {
@@ -62,4 +62,10 @@ body {
 
 .top-10-rated .title {
     color: white;
+    text-decoration: underline;
+}
+
+.top-10-games .title {
+    color: black;
+    text-decoration: underline;
 }
