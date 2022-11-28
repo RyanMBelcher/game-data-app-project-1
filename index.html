@@ -20,9 +20,9 @@
 
     <main class="main columns">
         <section class="game-generator column is-half">
-            <article class="about-section box">
+            <article class="about-section content">
                 <p>Looking for a new video game to play? This webstie gives you a random video game recommendation.
-                    Also, check out the latest and most popular games to date. Sorted by genre, platfrom, user scores,
+                    Also, check out the latest and most popular games to date. Sorted by genre, platform, user scores,
                     and more.
                 </p>
             </article>
@@ -30,35 +30,35 @@
                 <h1>Generate a random game</h1>
                 <div class="genre">
                     <select>
-                        <option>Action</option>
-                        <option>Adventure</option>
-                        <option>RPG</option>
-                        <option>Platformer</option>
-                        <option>Simulation</option>
-                        <option>Strategy</option>
-                        <option>Sports</option>
+                        <option id="action">Action</option>
+                        <option id="adventure">Adventure</option>
+                        <option id="rpg">RPG</option>
+                        <option id="platformer">Platformer</option>
+                        <option id="simulation">Simulation</option>
+                        <option id="strategy">Strategy</option>
+                        <option id="sports">Sports</option>
                     </select>
                 </div>
                 <div class="platform">
                     <select>
-                        <option>Playstation</option>
-                        <option>Xbox</option>
-                        <option>Nintendo</option>
-                        <option>PC</option>
+                        <option id="playstation">Playstation</option>
+                        <option id="xbox">Xbox</option>
+                        <option id="nintendo">Nintendo</option>
+                        <option id="pc">PC</option>
                     </select>
                 </div>
                 <button class="button is-small is-hoverable">GENERATE</button>
             </object>
-            
+
             <object class="game-of-the-day box">
                 <h1>Game of the Day</h1>
                 <p>"Dev's recommendation"</p>
             </object>
         </section>
 
-        <aside class="top-10-games column is-one-fifth ">
+        <aside class="top-10-games column is-one-fifth is-offset-1">
             <h1 class="title">Top 10 Most Played Video Games</h1>
-            <ul>
+            <ul class="most-played">
                 <li id="game1">Game 1</li>
                 <li id="game2">Game 2</li>
                 <li id="game3">Game 3</li>
@@ -74,7 +74,7 @@
 
         <aside class="top-10-rated column is-one-fifth">
             <h1 class="title">Top 10 User Rated Video Games</h1>
-            <ul>
+            <ul class="user-rated">
                 <li id="ratedgame1">Game 1</li>
                 <li id="ratedgame2">Game 2</li>
                 <li id="ratedgame3">Game 3</li>
