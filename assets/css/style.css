@@ -18,14 +18,17 @@ body {
 .random-generator {
     background-color: black;
     border: solid 3px antiquewhite;
+    font-size: x-large;
+    color: white;
 }
 
 .game-of-the-day {
     border: solid 3px black;
+    font-size: xx-large;
 }
 
 .about-section.box {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     padding: 3rem;
     background: none;
     color: white;
@@ -38,15 +41,22 @@ body {
     color: black;
     border: solid 3px black;
     margin: 5px;
+    margin-left: 4rem;
+    height: fit-content;
 }
 
 .top-10-rated {
     background-color: black;
     text-align: center;
-    color: antiquewhite;
+    color: white;
     border: solid 3px antiquewhite;
     margin: 5px;
+    height: fit-content;
 } 
+
+.top-10-rated .title {
+    color: white;
+}
 
 
  
