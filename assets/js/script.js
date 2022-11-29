@@ -4,22 +4,27 @@ var generateRandom = document.getElementById('#generate')
 const firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
 const secondkey = 'f137cf1f3c1fd662bd0326d342bf09b81662bb59';
 
-function getTen() {
-    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&dates=2022-01-01,2022-12-31&ordering=-added&page_size=10')
+function getTen(data) {
+    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=10&dates=2022-01-01,2022-12-31&ordering=-added')
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-        var nameOne = data.name
-        
+        console.log(data)
+        var gameName = 
+
 
     })
 }
 
-let getTenMore = () => {
-    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&dates=2022-01-01,2023-01-01&ordering=-rating&page_size=10')
-    .then(response => response.json())
-    .then(data => console.log(data))
+function getTenMore(data) {
+    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=10&dates=2022-01-01,2022-11-30&metacritic=88,100&ordering=-metacritic')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data)
+    })
 }
 
 
@@ -85,3 +90,4 @@ let getTenMore = () => {
 // Nintendo
 
 getTen();
+getTenMore();
