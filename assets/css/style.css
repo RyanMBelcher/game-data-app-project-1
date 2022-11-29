@@ -3,13 +3,19 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background-color: midnightblue;
+    background-color: black;
     overflow-x: hidden;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .navbar {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+}
+
+.navbar img {
+    height: 5rem;
+    width: 18rem;
 }
 
 .main {
@@ -24,18 +30,22 @@ img {
 .random-generator {
     background-color: black;
     border: solid 3px gold;
-    font-size: x-large;
+    font-size: xx-large;
     color: white;
-
-}
-
-.random-generator button {
-    float: inline-end;
+    text-decoration: underline;
 }
 
 .game-of-the-day {
-    border: solid 3px black;
+    border: solid 3px white;
     font-size: xx-large;
+    margin-top: 2rem;
+    background-color: gold;
+    color: black;
+}
+
+.game-of-the-day p {
+    font-size: medium;
+    color: black;
 }
 
 .about-section {
@@ -48,11 +58,12 @@ img {
 }
 
 .top-10-games {
-    background-color: white;
+    background-color: gold;
     text-align: center;
     color: black;
-    border: solid 3px black;
+    border: solid 3px white;
     margin: 5px;
+    margin-top: 3rem;
     height: fit-content;
 }
 
@@ -62,15 +73,30 @@ img {
     color: white;
     border: solid 3px gold;
     margin: 5px;
+    margin-top: 3rem;
     height: fit-content;
 }
 
 .top-10-rated .title {
     color: white;
     text-decoration: underline;
+    text-align: center;
 }
 
 .top-10-games .title {
     color: black;
     text-decoration: underline;
+    text-align: center;
+}
+
+.top-10-rated li {
+    border: solid gold 1px;
+}
+
+.top-10-games li {
+    border: solid black 1px;
+}
+
+.button {
+    float: right;
 }
