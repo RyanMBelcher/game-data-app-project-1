@@ -10,7 +10,12 @@ body {
 
 .navbar {
     margin-bottom: 1rem;
-    height: 4rem;
+    height: 5rem;
+}
+
+.navbar img {
+    height: 5rem;
+    width: 18rem;
 }
 
 .main {
@@ -20,8 +25,9 @@ body {
 .random-generator {
     background-color: black;
     border: solid 3px gold;
-    font-size: x-large;
+    font-size: xx-large;
     color: white;
+    text-decoration: underline;
 }
 
 .game-of-the-day {
@@ -76,4 +82,16 @@ body {
     color: black;
     text-decoration: underline;
     text-align: center;
+}
+
+.top-10-rated li {
+    border: solid gold 1px;
+}
+
+.top-10-games li {
+    border: solid black 1px;
+}
+
+.button {
+    float: right;
 }
