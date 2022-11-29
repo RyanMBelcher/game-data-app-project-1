@@ -25,7 +25,6 @@ var pcLink = '&parent_platforms=1'
 var xboxLink = '&parent_platforms=3'
 var nintendoLink = '&parent_platforms=7'
 var starterLink = 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1'
-
 var firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
 var secondkey = 'f137cf1f3c1fd662bd0326d342bf09b81662bb59';
 
@@ -85,6 +84,34 @@ function randomGame() {
 
 console.log(randomGame())
 
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+        })
+}
+function getOne(data) {
+    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+        })
+}
+function randomGame() {
+    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            const array = data.results
+            const random1 = array[(Math.floor(Math.random() * (array.length)))]
+            console.log(random1)
+        })
+}
+console.log(randomGame())
 
 // REVIEWS
 // 'https://www.giantbomb.com/api/user_reviews/?api_key=f137cf1f3c1fd662bd0326d342bf09b81662bb59'
