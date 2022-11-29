@@ -29,30 +29,32 @@
             <object class="random-generator box">
                 <h1>Generate a random game</h1>
                 <div class="genre">
-                    <select>
-                        <option id="action">Action</option>
-                        <option id="adventure">Adventure</option>
-                        <option id="rpg">RPG</option>
-                        <option id="platformer">Platformer</option>
-                        <option id="simulation">Simulation</option>
-                        <option id="strategy">Strategy</option>
-                        <option id="sports">Sports</option>
+                    <select id="genrepick">
+                        <option value="all" >All</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="rpg">RPG</option>
+                        <option value="platformer">Platformer</option>
+                        <option value="simulation">Simulation</option>
+                        <option value="strategy">Strategy</option>
+                        <option value="sports">Sports</option>
                     </select>
                 </div>
                 <div class="platform" id="platform">
-                    <select aria-placeholder="Platform">
-                        <option id="playstation">Playstation</option>
-                        <option id="xbox">Xbox</option>
-                        <option id="nintendo">Nintendo</option>
-                        <option id="pc">PC</option>
+                    <select aria-placeholder="Platform" id="platformpick">
+                        <option value="alltwo">All</option>
+                        <option value="playstation">Playstation</option>
+                        <option value="xbox">Xbox</option>
+                        <option value="nintendo">Nintendo</option>
+                        <option value="pc">PC</option>
                     </select>
                 </div>
-                <button class="button is-small is-hoverable is-warning is-outlined">GENERATE</button>
+                <button class="button is-small is-hoverable is-warning is-outlined" id="generate">GENERATE</button>
             </object>
 
             <object class="game-of-the-day box">
                 <h1>Game of the Day</h1>
-                <p id="game-of-the-day">"Dev's recommendation"</p>
+                <p id="game-of-the-day">"The Legend Of Zelda: The Wind Waker"</p>
             </object>
         </section>
 
