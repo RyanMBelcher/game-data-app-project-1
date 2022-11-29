@@ -1,56 +1,76 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: darkslategrey;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: midnightblue;
+  overflow-x: hidden;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar {
+  margin-bottom: 3rem;
+}
+
+.main {
+  margin: 3rem;
+}
+
+.random-generator {
+  background-color: black;
+  border: solid 3px gold;
+  font-size: x-large;
+  color: white;
   
-  .navbar {
-    margin-bottom: 3rem;
-  }
-  
-  .random-generator {
-    width: 40rem;
-    margin-left: 10rem;
-    background-color: black;
-  }
-  
-  .notification.is-danger {
-    background-color: darkslategrey;
-  }
-  
-  .about-section {
-    width: 40rem;
-    margin-left: 10rem;
-    font-size: 20px;
-  }
-  
-  .consoles {
-    width: 40rem;
-    margin-left: 10rem;
-  }
-  
-  .top-games {
-    text-align: center;
-  }
-  
-  .console {
-    margin: 20px;
-    text-align: center;
-  }
-  
-  #xbox {
-    background-color: darkgreen;
-    border: 3px solid black;
-  }
-  
-  #playstation {
-    background-color: darkblue;
-    border: 3px solid black;
-  }
-  
-  #nintendo {
-    background-color: red;
-    border: 3px solid black;
-  }
+}
+
+.random-generator button {
+  float: inline-end;
+}
+
+.game-of-the-day {
+  border: solid 3px black;
+  font-size: xx-large;
+}
+
+.about-section {
+  margin-bottom: 1rem;
+  padding: 2rem;
+  background: none;
+  color: white;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top-10-games {
+  background-color: white;
+  text-align: center;
+  color: black;
+  border: solid 3px black;
+  margin: 5px;
+  height: fit-content;
+}
+
+.top-10-rated {
+  background-color: black;
+  text-align: center;
+  color: white;
+  border: solid 3px gold;
+  margin: 5px;
+  height: fit-content;
+}
+
+.top-10-rated .title {
+  color: white;
+  text-decoration: underline;
+}
+
+.top-10-games .title {
+  color: black;
+  text-decoration: underline;
+}
+
+li {
+  list-style:circle;
+  list-style-position: inside;
+}

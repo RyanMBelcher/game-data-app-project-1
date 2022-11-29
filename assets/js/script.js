@@ -1,8 +1,33 @@
-var popular = document.getElementById('#popular')
-var generateRandom = document.getElementById('#generate')
+var genre = document.getElementById('genre');
+var action = document.getElementById('action');
+var adventure = document.getElementById('adventure');
+var rpg = document.getElementById('rpg');
+var platformer = document.getElementById('platformer');
+var simulation = document.getElementById('simulation');
+var sports = document.getElementById('sports');
+var platform = document.getElementById('platform');
+var playstation = document.getElementById('playstation');
+var xbox = document.getElementById('xbox');
+var pc = document.getElementById('pc');
+var nintendo = document.getElementById('nintendo');
+var gotd = document.getElementById('game-of-the-day');
+var mostPlayed = document.getElementById('most-played');
+var userRated = document.getElementById('user-rated');
+var actionLink = '&genres=action'
+var adventureLink = '&genres=adventure'
+var rpgLink = '&genres=role-playing-games-rpg'
+var simulationLink = '&genres=simulation'
+var sportsLink = '&genres=sports'
+var platformerLink = '&genres=platformer'
+var strategyLink = '&genres=strategy'
+var playstationLink = '&parent_platforms=2'
+var pcLink = '&parent_platforms=1'
+var xboxLink = '&parent_platforms=3'
+var nintendoLink = '&parent_platforms=7'
+var starterLink = 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1'
 
-const firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
-const secondkey = 'f137cf1f3c1fd662bd0326d342bf09b81662bb59';
+var firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
+var secondkey = 'f137cf1f3c1fd662bd0326d342bf09b81662bb59';
 
 function getTen(data) {
     fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=10&dates=2022-01-01,2022-12-31&ordering=-added')
@@ -10,10 +35,13 @@ function getTen(data) {
         return response.json();
     })
     .then(function (data) {
-        console.log(data)
-        var gameName = 
-
-
+        for (let i = 0; i < data.results.length; i++) {
+            var daytas = data.results[i].name;
+            let listItem = document.createElement('li');
+            listItem.textContent = daytas;
+            let gamesList = document.getElementById('most-played');
+            gamesList.appendChild(listItem)
+        }
     })
 }
 
@@ -23,46 +51,39 @@ function getTenMore(data) {
         return response.json();
     })
     .then(function (data) {
+        for (let i = 0; i < data.results.length; i++) {
+            var datas = data.results[i].name;
+            let listitemTwo = document.createElement('li');
+            listitemTwo.textContent = datas;
+            let gameslistTwo = document.getElementById('user-rated');
+            gameslistTwo.appendChild(listitemTwo)
+        }
+    })
+}
+
+function getOne(data) {
+    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
         console.log(data)
     })
 }
 
+function randomGame() {
+    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+    const array = data.results
+    const random1 = array[(Math.floor(Math.random() * (array.length)))]
+    console.log(random1)
+    })
+}
 
-// GET RANDOM GAME
-
-// function getRandomInt(min, max) {
-//     min = Math.ceil(min);
-//     max = Math.floor(max);
-//     return Math.floor(Math.random() * (max - min + 1) + min);
-//   };
-
-// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1' (getRawgCount)
-// function getRawgCount() {
-//       const response = await axios({
-//         url: 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1',
-//         method: 'GET'
-//       });
-//       return response.data.count;}
-
-// `https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page=${number}&page_size=' (fetchRawgSlug)
-// function fetchRawgSlug(number) {
-//       const response = await axios({
-//         url: `https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page=${number}&page_size=1',
-//         method: 'GET'
-//       });
-//       return response.data.results[0].slug;
-//   }
-
-// pickrandomgame() {
-    // var count = await getRawgCount();
-    // var randomNumber = getRandomInt(1, count);
-    // var slug = await fetchRawgSlug(randomNumber);
-    // open('https://rawg.io/games/' + slug);
-//   }
-
-
-// LATEST GAMES
-// 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&dates=2022-11-01,2022-12-01'
+console.log(randomGame())
 
 
 // REVIEWS
@@ -91,3 +112,4 @@ function getTenMore(data) {
 
 getTen();
 getTenMore();
+getOne();
