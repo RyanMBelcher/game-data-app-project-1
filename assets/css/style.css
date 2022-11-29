@@ -16,6 +16,11 @@ body {
     margin: 3rem;
 }
 
+img {
+    height: 75px;
+    width: auto;
+}
+
 .random-generator {
     background-color: black;
     border: solid 3px gold;
