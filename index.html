@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Video Game Generator App</title>
 </head>
-
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <a>
             <img id="logo" src="./assets/images/logo.png" width="112" height="28">
         </a>
     </nav>
-
     <main class="main columns">
         <section class="game-generator column is-half">
             <article class="about-section content">
@@ -24,7 +22,6 @@
                     select a genre and a console type, click generate, and your randomly generated game will be given to you! 
                     Also, check out the top 10 current most-played and user-rated games on all platforms.
             </article>
-            
             <object class="random-generator box">
                 <h1>Generate a random game:</h1>
                 <div class="genre">
@@ -38,7 +35,7 @@
                         <option id="sports">Sports</option>
                     </select>
                 </div>
-                <div class="platform">
+                <div class="platform" id="platform">
                     <select aria-placeholder="Platform">
                         <option id="playstation">Playstation</option>
                         <option id="xbox">Xbox</option>
@@ -54,13 +51,11 @@
                 <p id="game-of-the-day">"Dev's recommendation"</p>
             </object>
         </section>
-
         <aside class="top-10-games column is-one-fifth is-offset-1">
             <h1 class="title">Top 10 Most Played Video Games</h1>
             <ul id="most-played" class="most-played">
             </ul>
         </aside>
-
         <aside class="top-10-rated column is-one-fifth">
             <h1 class="title">Top 10 User Rated Video Games</h1>
             <ul id="user-rated" class="user-rated">
