@@ -9,21 +9,18 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Video Game Generator App</title>
 </head>
-
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <a class="navbar-item">
             <img id="logo" src="./assets/images/logo.png" width="112" height="28">
         </a>
     </nav>
-
     <main class="main columns">
         <section class="game-generator column is-one-third">
             <article class="about-section content">
-                <p>Looking for a new video game to play? This webstie gives you a random video game recommendation.
-                    Also, check out the latest and most popular games to date. Sorted by genre, platform, user scores,
-                    and more.
-                </p>
+                <p>Looking for a new video game to play? This website gives you a random video game recommendation. Just 
+                    select a genre and a console type, click generate, and your randomly generated game will be given to you! 
+                    Also, check out the top 10 current most-played and user-rated games on all platforms.
             </article>
             <object class="random-generator box" id="the-box">
                 <h1>Generate a random game</h1>
@@ -47,6 +44,7 @@
                         <option value="nintendo">Nintendo</option>
                         <option value="pc">PC</option>
                     </select>
+                    <button class="button is-small is-hoverable is-warning is-outlined">GENERATE</button>
                 </div>
                 <button class="button is-small is-hoverable is-warning is-outlined" id="generate">GENERATE</button>
             </object>
@@ -56,13 +54,11 @@
                 <p id="game-of-the-day">"The Legend Of Zelda: The Wind Waker"</p>
             </object>
         </section>
-
         <aside class="top-10-games column is-one-fifth is-offset-1">
             <h1 class="title">Top 10 Most Popular Video Games (Of The Year)</h1>
             <ul class="most-played" id="most-played">
             </ul>
         </aside>
-
         <aside class="top-10-rated column is-one-fifth">
             <h1 class="title">Top 10 Rated Video Games Metacritic (Of The Year)</h1>
             <ul class="user-rated" id="user-rated">
@@ -76,9 +72,7 @@
         </aside>
 
     </main>
-<script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
-
-<!-- <img src="https://www.placecage.com/640/360" alt="#"> -->

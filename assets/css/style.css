@@ -19,7 +19,12 @@ body {
 }
 
 .main {
-  margin: 3rem;
+    margin: 3rem;
+}
+
+img {
+    height: 75px;
+    width: auto;
 }
 
 img {
@@ -48,12 +53,12 @@ img {
 }
 
 .about-section {
-  margin-bottom: 1rem;
-  padding: 2rem;
-  background: none;
-  color: white;
-  font-size: large;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background: none;
+    color: white;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .top-10-games {
