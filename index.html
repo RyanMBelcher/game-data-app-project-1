@@ -20,16 +20,17 @@
     <main class="main columns">
         <section class="game-generator column is-one-third">
             <article class="about-section content">
-                <p>Looking for a new video game to play? This webstie gives you a random video game recommendation.
-                    Also, check out the latest and most popular games to date. Sorted by genre, platform, user scores,
-                    and more.
+                <p>Looking for a new video game to play? This website gives you a random video game recommendation. Just
+                    select a genre and a console type, click generate, and your randomly generated game will be given to
+                    you!
+                    Also, check out the top 10 current most-played and user-rated games on all platforms.
                 </p>
             </article>
-            <object class="random-generator box" id="the-box">
+            <object class="random-generator box">
                 <h1>Generate a random game</h1>
                 <div class="genre">
                     <select id="genrepick">
-                        <option value="all" >All</option>
+                        <option value="all">All</option>
                         <option value="action">Action</option>
                         <option value="adventure">Adventure</option>
                         <option value="rpg">RPG</option>
@@ -47,8 +48,9 @@
                         <option value="nintendo">Nintendo</option>
                         <option value="pc">PC</option>
                     </select>
+                    <button class="button is-small is-hoverable is-warning is-outlined" id="generate">GENERATE</button>
+                    <div id="the-box"></div>
                 </div>
-                <button class="button is-small is-hoverable is-warning is-outlined" id="generate">GENERATE</button>
             </object>
 
             <object class="game-of-the-day box">
@@ -59,12 +61,14 @@
 
         <aside class="top-10-games column is-one-fifth is-offset-1">
             <h1 class="title">Top 10 Most Popular Video Games (Of The Year)</h1>
+
             <ul class="most-played" id="most-played">
             </ul>
         </aside>
 
         <aside class="top-10-rated column is-one-fifth">
             <h1 class="title">Top 10 Rated Video Games Metacritic (Of The Year)</h1>
+
             <ul class="user-rated" id="user-rated">
             </ul>
         </aside>
@@ -81,4 +85,3 @@
 
 </html>
 
-<!-- <img src="https://www.placecage.com/640/360" alt="#"> -->

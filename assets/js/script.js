@@ -28,7 +28,6 @@ var pcLink = '&parent_platforms=1';
 var xboxLink = '&parent_platforms=3';
 var nintendoLink = '&parent_platforms=7';
 var starterLink = 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1';
-
 var firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
 
 window.addEventListener("load", (event) => {
@@ -42,36 +41,34 @@ window.addEventListener("load", (event) => {
 
 function getTen(data) {
     fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=10&dates=2022-01-01,2022-12-31&ordering=-added')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        for (let i = 0; i < data.results.length; i++) {
-            var daytas = data.results[i].name;
-            let listItem = document.createElement('li');
-            listItem.textContent = daytas;
-            let gamesList = document.getElementById('most-played');
-            gamesList.appendChild(listItem)
-        }
-    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            for (let i = 0; i < data.results.length; i++) {
+                var daytas = data.results[i].name;
+                let listItem = document.createElement('li');
+                listItem.textContent = daytas;
+                let gamesList = document.getElementById('most-played');
+                gamesList.appendChild(listItem)
+            }
+        })
 };
-
 function getTenMore(data) {
     fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=10&dates=2022-01-01,2022-11-30&metacritic=88,100&ordering=-metacritic')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        for (let i = 0; i < data.results.length; i++) {
-            var datas = data.results[i].name;
-            let listitemTwo = document.createElement('li');
-            listitemTwo.textContent = datas;
-            let gameslistTwo = document.getElementById('user-rated');
-            gameslistTwo.appendChild(listitemTwo)
-        }
-    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            for (let i = 0; i < data.results.length; i++) {
+                var datas = data.results[i].name;
+                let listitemTwo = document.createElement('li');
+                listitemTwo.textContent = datas;
+                let gameslistTwo = document.getElementById('user-rated');
+                gameslistTwo.appendChild(listitemTwo)
+            }
+        })
 };
-
 function randomGame() {
     // gameplatformGenerator();
     var platformpick = document.getElementById('platformpick');
@@ -93,7 +90,6 @@ function randomGame() {
     var platformerLink = '&genres=platformer';
     var strategyLink = '&genres=strategy';
     var starterLink = 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df';
-
     if (platformpick.value === 'playstation') {
         starterLink = starterLink + playstationLink
     } else if (platformpick.value === 'pc') {
@@ -105,7 +101,6 @@ function randomGame() {
     } else {
         starterLink = starterLink
     }
-
     if (genrepick.value === 'action') {
         starterLink = starterLink + actionLink
     } else if (genrepick.value === 'adventure') {
@@ -123,24 +118,23 @@ function randomGame() {
     } else {
         starterLink = starterLink
     }
-    
     console.log(starterLink)
-
     fetch(starterLink)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-    const array = data.results
-    const random1 = array[(Math.floor(Math.random() * (array.length)))]
-    console.log(random1)
-    let pitem = document.createElement('p')
-    pitem.textContent = random1.name
-    let generatorbox = document.getElementById('the-box')
-    generatorbox.appendChild(pitem)
-    
-    localStorage.setItem('game', random1.name);
-    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            const array = data.results
+            const random1 = array[(Math.floor(Math.random() * (array.length)))]
+            console.log(random1)
+            let pitem = document.createElement('p')
+            pitem.textContent = random1.name
+            let generatorbox = document.getElementById('the-box')
+            generatorbox.innerHTML = '';
+            generatorbox.appendChild(pitem)
+
+            localStorage.setItem('game', random1.name);
+        })
 };
 
 function getPrice() {
@@ -173,8 +167,5 @@ function getPrice() {
 
 getTen();
 getTenMore();
-
-console.log(getPrice())
-
-
+getPrice();
 generateBtn.addEventListener('click', randomGame);
