@@ -9,6 +9,8 @@
 - With this app, we hope to solve the problem that gamers have faced since the beginning of gaming... Picking which game to play.
 - During the creation of this project we have learned different things about creating a webpage such as adapting to changes and learning how to manage a mass amount of data but one of the most important things we have learned is teamwork, it really does make the dream work...
 
+## Table Of Contents
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -41,7 +43,11 @@ Modules 4-7 UPENN Coding Bootcamp
 
 ## Link
 
-Repo: https://github.com/ColinDeery/game-data-app-project-1
+Repo: 
+https://github.com/ColinDeery/game-data-app-project-1
+
+Website:
+https://colindeery.github.io/game-data-app-project-1/
 
 ## License
 
