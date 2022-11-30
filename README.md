@@ -15,7 +15,7 @@ To use the app/website, it is as simple as going to the website, selecting the g
 
 ## Usage
 
-    ![alt text](assets/images/screenshot.png)
+    ![alt text](assets/images/Screenshot.png)
 
 ## Credits
 
