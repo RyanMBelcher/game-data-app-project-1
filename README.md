@@ -46,16 +46,16 @@ Modules 4-7 UPENN Coding Bootcamp
 ## Link
 
 Repo: 
-https://github.com/ColinDeery/game-data-app-project-1
+https://github.com/RyanMBelcher/game-data-app-project-1
 
 Website:
-https://colindeery.github.io/game-data-app-project-1/
+https://ryanmbelcher.github.io/game-data-app-project-1/
 
 ## License
 
 MIT License
 
-Copyright (c) [2022] [Joshua Carter]
+Copyright (c) [2022] [Ryan M Belcher]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -27,8 +27,8 @@ var playstationLink = '&parent_platforms=2';
 var pcLink = '&parent_platforms=1';
 var xboxLink = '&parent_platforms=3';
 var nintendoLink = '&parent_platforms=7';
-var starterLink = 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1';
-var firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
+var starterLink = 'https://api.rawg.io/api/games?key=b30d6334305c449fa022945f70b5f0d9&page_size=1';
+var firstkey = 'key=b30d6334305c449fa022945f70b5f0d9';
 
 window.addEventListener("load", (event) => {
     console.log("page is fully loaded");
@@ -40,7 +40,7 @@ window.addEventListener("load", (event) => {
 });
 
 function getTen(data) {
-    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=10&dates=2022-01-01,2022-12-31&ordering=-added')
+    fetch('https://api.rawg.io/api/games?key=b30d6334305c449fa022945f70b5f0d9&page_size=10&dates=2022-01-01,2022-12-31&ordering=-added')
         .then(function (response) {
             return response.json();
         })
@@ -55,7 +55,7 @@ function getTen(data) {
         })
 };
 function getTenMore(data) {
-    fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=10&dates=2022-01-01,2022-11-30&metacritic=88,100&ordering=-metacritic')
+    fetch('https://api.rawg.io/api/games?key=b30d6334305c449fa022945f70b5f0d9&page_size=10&dates=2022-01-01,2022-11-30&metacritic=88,100&ordering=-metacritic')
         .then(function (response) {
             return response.json();
         })
@@ -89,7 +89,7 @@ function randomGame() {
     var sportsLink = '&genres=sports';
     var platformerLink = '&genres=platformer';
     var strategyLink = '&genres=strategy';
-    var starterLink = 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df';
+    var starterLink = 'https://api.rawg.io/api/games?key=b30d6334305c449fa022945f70b5f0d9';
     if (platformpick.value === 'playstation') {
         starterLink = starterLink + playstationLink
     } else if (platformpick.value === 'pc') {
@@ -139,30 +139,30 @@ function randomGame() {
 
 function getPrice() {
     fetch('https://www.cheapshark.com/api/1.0/deals?storeID=11&sortBy=Savings&pageSize=10')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        for (let i = 0; i < data.length; i++) {
-            var title = data[i].title;
-            var normal = data[i].normalPrice;
-            var sale = data[i].salePrice;
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            for (let i = 0; i < data.length; i++) {
+                var title = data[i].title;
+                var normal = data[i].normalPrice;
+                var sale = data[i].salePrice;
 
-            console.log(sale)
+                console.log(sale)
 
-            let li = document.createElement('li');
-            li.textContent = title;
-            let firstH = document.createElement('h1');
-            firstH.textContent = 'Sale Price: $' + sale;
-            let secondH = document.createElement('h2');
-            secondH.textContent = 'Normal Price: $' + normal;
+                let li = document.createElement('li');
+                li.textContent = title;
+                let firstH = document.createElement('h1');
+                firstH.textContent = 'Sale Price: $' + sale;
+                let secondH = document.createElement('h2');
+                secondH.textContent = 'Normal Price: $' + normal;
 
-            let saleList = document.getElementById('gamez')
-            saleList.appendChild(li);
-            saleList.appendChild(firstH);
-            saleList.appendChild(secondH);
-        }
-    })
+                let saleList = document.getElementById('gamez')
+                saleList.appendChild(li);
+                saleList.appendChild(firstH);
+                saleList.appendChild(secondH);
+            }
+        })
 }
 
 getTen();
