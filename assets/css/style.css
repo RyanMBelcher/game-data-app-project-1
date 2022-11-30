@@ -1,16 +1,16 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    overflow-x: hidden;
-    font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow-x: hidden;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .navbar {
-    margin-bottom: 1rem;
-    height: 5rem;
+  margin-bottom: 1rem;
+  height: 5rem;
 }
 
 .navbar img {
@@ -19,84 +19,115 @@ body {
 }
 
 .main {
-    margin: 3rem;
+  margin: 3rem;
 }
 
 img {
-    height: 75px;
-    width: auto;
+  height: 75px;
+  width: auto;
 }
 
 .random-generator {
-    background-color: black;
-    border: solid 3px gold;
-    font-size: xx-large;
-    color: white;
-    text-decoration: underline;
+  background-color: black;
+  border: solid 3px gold;
+  font-size: xx-large;
+  color: white;
 }
 
 .game-of-the-day {
-    border: solid 3px white;
-    font-size: xx-large;
-    margin-top: 2rem;
-    background-color: gold;
-    color: black;
+  border: solid 3px white;
+  font-size: xx-large;
+  margin-top: 2rem;
+  background-color: gold;
+  color: black;
 }
 
 .game-of-the-day p {
-    font-size: medium;
-    color: black;
+  font-size: medium;
+  color: black;
 }
 
 .about-section {
-    margin-bottom: 1rem;
-    padding: 2rem;
-    background: none;
-    color: white;
-    font-size: large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  background: none;
+  color: white;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .top-10-games {
-    background-color: gold;
-    text-align: center;
-    color: black;
-    border: solid 3px white;
-    margin: 5px;
-    margin-top: 3rem;
-    height: fit-content;
+  background-color: gold;
+  text-align: center;
+  color: black;
+  border: solid 3px white;
+  margin: 5px;
+  margin-top: 3rem;
+  height: fit-content;
 }
 
 .top-10-rated {
-    background-color: black;
-    text-align: center;
-    color: white;
-    border: solid 3px gold;
-    margin: 5px;
-    margin-top: 3rem;
-    height: fit-content;
+  background-color: black;
+  text-align: center;
+  color: white;
+  border: solid 3px gold;
+  margin: 5px;
+  margin-top: 3rem;
+  height: fit-content;
+}
+
+.top-10-deals li {
+  border: solid black 1px;
+}
+
+.top-10-deals {
+  background-color: gold;
+  text-align: center;
+  color: black;
+  border: solid 3px white;
+  margin: 5px;
+  margin-top: 3rem;
+  height: fit-content;
 }
 
 .top-10-rated .title {
-    color: white;
-    text-decoration: underline;
-    text-align: center;
+  color: white;
+  text-decoration: underline;
+  text-align: center;
 }
 
 .top-10-games .title {
-    color: black;
-    text-decoration: underline;
-    text-align: center;
+  color: black;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.top-10-deals .title {
+  color: black;
+  text-decoration: underline;
+  text-align: center;
 }
 
 .top-10-rated li {
-    border: solid gold 1px;
+  border: solid gold 1px;
 }
 
 .top-10-games li {
-    border: solid black 1px;
+  border: solid black 1px;
 }
 
-.button {
-    float: right;
+li {
+  list-style: circle;
+  list-style-position: inside;
+  margin-top: 5px;
 }
+
+p {
+  text-align:start;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+

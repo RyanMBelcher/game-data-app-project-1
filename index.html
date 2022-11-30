@@ -12,13 +12,13 @@
 
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <a>
+        <a class="navbar-item">
             <img id="logo" src="./assets/images/logo.png" width="112" height="28">
         </a>
     </nav>
 
     <main class="main columns">
-        <section class="game-generator column is-half">
+        <section class="game-generator column is-one-third">
             <article class="about-section content">
                 <p>Looking for a new video game to play? This website gives you a random video game recommendation. Just
                     select a genre and a console type, click generate, and your randomly generated game will be given to
@@ -51,7 +51,6 @@
                     <button class="button is-small is-hoverable is-warning is-outlined" id="generate">GENERATE</button>
                     <div id="the-box"></div>
                 </div>
-
             </object>
 
             <object class="game-of-the-day box">
@@ -61,18 +60,28 @@
         </section>
 
         <aside class="top-10-games column is-one-fifth is-offset-1">
-            <h1 class="title">Top 10 Most Played Video Games</h1>
+            <h1 class="title">Top 10 Most Popular Video Games (Of The Year)</h1>
+
             <ul class="most-played" id="most-played">
             </ul>
         </aside>
 
         <aside class="top-10-rated column is-one-fifth">
-            <h1 class="title">Top 10 User Rated Video Games</h1>
+            <h1 class="title">Top 10 Rated Video Games Metacritic (Of The Year)</h1>
+
             <ul class="user-rated" id="user-rated">
             </ul>
         </aside>
+
+        <aside class="top-10-deals column is-one-fifth">
+            <h1 class="title">Best Current Deals With HumbleBundle</h1>
+            <ul class="user-rated" id="gamez">
+            </ul>
+        </aside>
+
     </main>
-    <script src="./assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 
 </html>
+

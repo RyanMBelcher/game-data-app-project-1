@@ -29,8 +29,6 @@ var xboxLink = '&parent_platforms=3';
 var nintendoLink = '&parent_platforms=7';
 var starterLink = 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1';
 var firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
-var secondkey = 'ed4c3a730c6d8c953a25e42e9f7cb10f41f5b0c5';
-
 
 window.addEventListener("load", (event) => {
     console.log("page is fully loaded");
@@ -138,15 +136,36 @@ function randomGame() {
             localStorage.setItem('game', random1.name);
         })
 };
-function getNews() {
-    fetch('http://www.gamespot.com/api/articles/?api_key=ed4c3a730c6d8c953a25e42e9f7cb10f41f5b0c5&limit=10')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data)
-        })
+
+function getPrice() {
+    fetch('https://www.cheapshark.com/api/1.0/deals?storeID=11&sortBy=Savings&pageSize=10')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        for (let i = 0; i < data.length; i++) {
+            var title = data[i].title;
+            var normal = data[i].normalPrice;
+            var sale = data[i].salePrice;
+
+            console.log(sale)
+
+            let li = document.createElement('li');
+            li.textContent = title;
+            let firstH = document.createElement('h1');
+            firstH.textContent = 'Sale Price: $' + sale;
+            let secondH = document.createElement('h2');
+            secondH.textContent = 'Normal Price: $' + normal;
+
+            let saleList = document.getElementById('gamez')
+            saleList.appendChild(li);
+            saleList.appendChild(firstH);
+            saleList.appendChild(secondH);
+        }
+    })
 }
+
 getTen();
 getTenMore();
+getPrice();
 generateBtn.addEventListener('click', randomGame);
