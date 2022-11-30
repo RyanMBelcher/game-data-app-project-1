@@ -25,6 +25,8 @@ To use the app/website, it is as simple as going to the website, selecting the g
 
 Open the application/URL on your desired browser and desired device. Use the drop down menus for console and genre to select certain field requirements for your randmoly generated game. Click the generate button and a game title will appear, and do not worry! The game title will still be there if you click out of the page and decide to come back. View the three lists to see highest rated games of the year, the most popular games of the year, and the best current deals on HumbleBundle. Also, feel free to check out our game of the day!
 
+![screenshot](./assets/images/Screenshot%20(6).png)
+
 ## Credits
 
 https://github.com/RyanMBelcher
