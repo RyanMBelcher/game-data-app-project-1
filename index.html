@@ -12,21 +12,20 @@
 
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-            </a>
+        <a class="navbar-item">
+            <img id="logo" src="./assets/images/logo.png" width="112" height="28">
+        </a>
     </nav>
 
     <main class="main columns">
-        <section class="game-generator column is-half">
+        <section class="game-generator column is-one-third">
             <article class="about-section content">
                 <p>Looking for a new video game to play? This webstie gives you a random video game recommendation.
                     Also, check out the latest and most popular games to date. Sorted by genre, platform, user scores,
                     and more.
                 </p>
             </article>
-            <object class="random-generator box">
+            <object class="random-generator box" id="the-box">
                 <h1>Generate a random game</h1>
                 <div class="genre">
                     <select id="genrepick">
@@ -59,16 +58,23 @@
         </section>
 
         <aside class="top-10-games column is-one-fifth is-offset-1">
-            <h1 class="title">Top 10 Most Played Video Games</h1>
+            <h1 class="title">Top 10 Most Popular Video Games (Of The Year)</h1>
             <ul class="most-played" id="most-played">
             </ul>
         </aside>
 
         <aside class="top-10-rated column is-one-fifth">
-            <h1 class="title">Top 10 User Rated Video Games</h1>
+            <h1 class="title">Top 10 Rated Video Games Metacritic (Of The Year)</h1>
             <ul class="user-rated" id="user-rated">
             </ul>
         </aside>
+
+        <aside class="top-10-deals column is-one-fifth">
+            <h1 class="title">Best Current Deals With HumbleBundle</h1>
+            <ul class="user-rated" id="gamez">
+            </ul>
+        </aside>
+
     </main>
 <script src="./assets/js/script.js"></script>
 </body>

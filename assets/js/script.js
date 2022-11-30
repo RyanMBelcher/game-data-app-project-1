@@ -30,7 +30,15 @@ var nintendoLink = '&parent_platforms=7';
 var starterLink = 'https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=1';
 
 var firstkey = 'key=7fe5813e90774b17a77f1b43d96e25df';
-var secondkey = 'f137cf1f3c1fd662bd0326d342bf09b81662bb59';
+
+window.addEventListener("load", (event) => {
+    console.log("page is fully loaded");
+    let storedGame = localStorage.getItem('game');
+    let pitem = document.createElement('p')
+    pitem.textContent = storedGame
+    let generatorbox = document.getElementById('the-box')
+    generatorbox.appendChild(pitem)
+});
 
 function getTen(data) {
     fetch('https://api.rawg.io/api/games?key=7fe5813e90774b17a77f1b43d96e25df&page_size=10&dates=2022-01-01,2022-12-31&ordering=-added')
@@ -126,19 +134,47 @@ function randomGame() {
     const array = data.results
     const random1 = array[(Math.floor(Math.random() * (array.length)))]
     console.log(random1)
+    let pitem = document.createElement('p')
+    pitem.textContent = random1.name
+    let generatorbox = document.getElementById('the-box')
+    generatorbox.appendChild(pitem)
+    
+    localStorage.setItem('game', random1.name);
     })
 };
 
-console.log(getTen())
-console.log(getTenMore())
-console.log(randomGame())
+function getPrice() {
+    fetch('https://www.cheapshark.com/api/1.0/deals?storeID=11&sortBy=Savings&pageSize=10')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        for (let i = 0; i < data.length; i++) {
+            var title = data[i].title;
+            var normal = data[i].normalPrice;
+            var sale = data[i].salePrice;
+
+            console.log(sale)
+
+            let li = document.createElement('li');
+            li.textContent = title;
+            let firstH = document.createElement('h1');
+            firstH.textContent = 'Sale Price: $' + sale;
+            let secondH = document.createElement('h2');
+            secondH.textContent = 'Normal Price: $' + normal;
+
+            let saleList = document.getElementById('gamez')
+            saleList.appendChild(li);
+            saleList.appendChild(firstH);
+            saleList.appendChild(secondH);
+        }
+    })
+}
 
 getTen();
 getTenMore();
-randomGame();
-generateBtn.addEventListener('click', randomGame);
 
-// REVIEWS
-// 'https://www.giantbomb.com/api/user_reviews/?api_key=f137cf1f3c1fd662bd0326d342bf09b81662bb59'
-// Pull parameter 'score' to reveal general user score
-// MATCH API PARAMETERS 'slug'='game' OR 'name'='game'. Parameter 'game' belongs to giantbomb, parameter 'slug'/'name' belongs to RAWG.
+console.log(getPrice())
+
+
+generateBtn.addEventListener('click', randomGame);
